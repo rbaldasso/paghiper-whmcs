@@ -7,7 +7,7 @@
  * @author     Equipe PagHiper https://github.com/paghiper/whmcs
  * @author     Desenvolvido e mantido Henrique Cruz - https://henriquecruz.com.br/
  * @license    BSD License (3-clause)
- * @copyright  (c) 2017-2021, PagHiper
+ * @copyright  (c) 2017-2023, PagHiper
  * @link       https://www.paghiper.com/
  */
 
@@ -209,10 +209,9 @@ function paghiper_pix_link($params) {
             <form name=\"paghiper\" action=\"{$urlRetorno}?invoiceid={$params['invoiceid']}&uuid={$params['clientdetails']['userid']}&mail={$params['clientdetails']['email']}&pix=true\" method=\"post\">
                 <input type=\"hidden\" name=\"client_data\" value='".json_encode($client_details)."'>    
                 <input type='image' src='{$systemurl}/modules/gateways/paghiper/assets/img/pix.jpg' title='Pagar com Pix' alt='Pagar com Pix' border='0' align='absbottom' width='120' height='74' /><br>
-                <button formtarget='_blank' class='btn btn-success' style='margin-top: 5px;' type=\"submit\"><i class='fa fa-barcode'></i> Pagar usando PIX</button>
                 <br> <br>
-                <div class='alert alert-warning' role='alert'>
-                Seu pagamento PIX está sendo gerado. Quando o pagamento for efetuado, a confirmação se dá imediatamente.
+                <div class='alert alert-warning' role='alert' style='margin:10px 0;'><br/>
+                Ao efetuar o pagamento com PIX, ele será confirmado em até 5 minutos.
                 </div>
                 <!-- FIM DO BOLETO PAGHIPER -->
             </form>
