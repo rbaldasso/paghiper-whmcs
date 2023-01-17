@@ -3,11 +3,11 @@
  * PagHiper - Módulo oficial para integração com WHMCS
  * 
  * @package    PagHiper para WHMCS
- * @version    2.4.1
+ * @version    2.4.2
  * @author     Equipe PagHiper https://github.com/paghiper/whmcs
  * @author     Desenvolvido e mantido Henrique Cruz - https://henriquecruz.com.br/
  * @license    BSD License (3-clause)
- * @copyright  (c) 2017-2021, PagHiper
+ * @copyright  (c) 2017-2023, PagHiper
  * @link       https://www.paghiper.com/
  */
 
@@ -264,10 +264,9 @@ function paghiper_link($params) {
             <form name=\"paghiper\" action=\"{$urlRetorno}?invoiceid={$params['invoiceid']}&uuid={$params['clientdetails']['userid']}&mail={$params['clientdetails']['email']}\" method=\"post\">
                 <input type=\"hidden\" name=\"client_data\" value='".json_encode($client_details)."'>
                 <input type='image' src='{$systemurl}/modules/gateways/paghiper/assets/img/billet.jpg' title='Pagar com Boleto' alt='Pagar com Boleto' border='0' align='absbottom' width='120' height='74' /><br>
-                <button formtarget='_blank' class='btn btn-success' style='margin-top: 5px;' type=\"submit\"><i class='fa fa-barcode'></i> Gerar Boleto</button>
                 <br> <br>
-                <div class='alert alert-warning' role='alert'>
-                <strong>Importante:</strong> A compensação bancária poderá levar até 2 dias úteis.
+                <div class='alert alert-warning' role='alert' style='margin:10px 0;'>
+                <strong>Importante:</strong> A compensação bancária poderá levar até 2 dias úteis. O pagamento só será confirmado com a compensação bancária.
                 </div>
                 <!-- FIM DO BOLETO PAGHIPER --> 
             </form>
